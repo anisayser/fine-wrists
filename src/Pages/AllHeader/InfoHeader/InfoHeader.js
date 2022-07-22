@@ -23,7 +23,7 @@ const InfoHeader = () => {
         <Box className='border-b border-[#2f2f2f] pt-1'>
             <Container>
                 <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={10} sm={6}>
                         <Box className='flex space-x-3'>
                             <Box className='w-8 h-8 bg-[#2f2f2f] rounded-full text-white flex items-center justify-center'>
                                 <Icon className="fa-brands fa-facebook-f" style={{ fontSize: '16px' }}></Icon>
@@ -40,7 +40,7 @@ const InfoHeader = () => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} sm={6} className='text-right'>
+                    <Grid item xs={2} sm={6} className='text-right'>
                         <Tooltip title="Account settings">
                             <IconButton
                                 onClick={handleClick}

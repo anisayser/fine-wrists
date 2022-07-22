@@ -88,7 +88,7 @@ const Product = ({ product }) => {
             </Snackbar>
             <Paper elevation={3} className='bg-[#242424] text-white pb-3'>
                 <Box>
-                    <img src={img} alt="" />
+                    <img src={img} className='w-full' alt="" />
                 </Box>
                 <Box className='space-y-3'>
                     <Typography variant='subtitle2' color='muted' mt={2}>{brand}</Typography>

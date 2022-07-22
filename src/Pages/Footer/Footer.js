@@ -82,7 +82,7 @@ const Footer = () => {
                     </Grid>
 
                     <Grid item xs={12}>
-                        <Box className='text-lg space-x-8 border-t border-b border-[#2f2f2f] py-3' color='muted.main'>
+                        <Box className='flex flex-col sm:flex-row justify-start sm:justify-center text-lg space-x-8 border-t border-b border-[#2f2f2f] py-3' color='muted.main'>
                             <Link to='#'>Home</Link>
                             <Link to='#'>Online Store</Link>
                             <Link to='#'>Promotion</Link>
