@@ -1,4 +1,4 @@
-import { Autocomplete, Box, Checkbox, Container, Divider, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, Skeleton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextareaAutosize, TextField, Typography } from '@mui/material';
+import { Autocomplete, Backdrop, Box, Checkbox, CircularProgress, Container, Divider, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, Skeleton, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextareaAutosize, TextField, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -21,6 +21,16 @@ const PlaceOrder = () => {
     const [paymentMethod, setPaymentMethod] = useState('cash');
     const [orderDate, setOrderDate] = useState(new Date());
     const navigate = useNavigate();
+
+    //PLACE ORDER BACKDROP LOADING CONTROLLERS
+    const [open, setOpen] = useState(false);
+    const handleClose = () => {
+        setOpen(false);
+    };
+    const handleToggle = () => {
+        setOpen(!open);
+    };
+    //PLACE ORDER BACKDROP LOADING CONTROLLERS
 
     /*  console.log(orderDate)
         console.log(orderDate.toLocaleDateString())
@@ -61,6 +71,8 @@ const PlaceOrder = () => {
     const handlePlaceOrder = e => {
         e.preventDefault();
 
+        handleToggle();
+
         //DELETE THE USER CART
         fetch(`https://pacific-sea-83230.herokuapp.com/allusercart/${user.email}`, {
             method: 'DELETE',
@@ -85,8 +97,6 @@ const PlaceOrder = () => {
             orderTime: orderDate.toLocaleTimeString()
         }
 
-
-
         // console.log(orderValue)
 
         fetch('https://pacific-sea-83230.herokuapp.com/placeorder', {
@@ -101,13 +111,9 @@ const PlaceOrder = () => {
                 // console.log(data)
                 if (data.insertedId) {
                     navigate(`/orderplaced/${data.insertedId}`, { replace: true });
-
+                    handleClose();
                 }
             })
-
-
-
-
 
     }
 
@@ -121,6 +127,14 @@ const PlaceOrder = () => {
             {/* HEADER ENDS */}
             <Box className='py-20 '>
                 <Container className='bg-[#2f2f2f]'>
+
+                    <Backdrop
+                        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                        open={open}
+                        onClick={handleClose}
+                    >
+                        <CircularProgress />
+                    </Backdrop>
                     <form onSubmit={handlePlaceOrder}>
                         <Grid container spacing={4}>
                             <Grid item xs={12} md={6}>

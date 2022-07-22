@@ -1,3 +1,4 @@
+import { Backdrop, CircularProgress } from '@mui/material';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation } from 'react-router-dom';
@@ -10,14 +11,22 @@ const AdminRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <h1 className='text-4xl text-white'>Loading......</h1>
+        return <Backdrop
+            sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+            open={true}
+
+        >
+            <CircularProgress />
+        </Backdrop>
     }
 
-    if (user.email && isAdmin) {
-        return children;
-    } else {
-        return console.log('Go and fuck yourself');
+    if (!user.email && isAdmin) {
+        return console.log('Youre not admin');
     }
+
+
+    return children;
+
 
 };
 
