@@ -47,7 +47,7 @@ const Order = ({ order }) => {
                         <Typography variant='h6' fontWeight='bold' sx={{ flexShrink: 0 }}>
                             Order from {order.name}. ( Email: <Typography variant='body' color='primary'>{order.email}</Typography> )
                         </Typography>
-                        <Typography>Status: <Typography variant='body' fontWeight='bold' color='primary'>{orStatus}</Typography></Typography>
+                        <Typography>Status: <Typography variant='body' fontWeight='bold' color={orStatus === 'pending' ? 'primary' : 'success.main'}>{orStatus}</Typography></Typography>
                     </Box>
                 </AccordionSummary>
                 <AccordionDetails>

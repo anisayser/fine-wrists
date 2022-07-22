@@ -268,7 +268,7 @@ const ProductDetails = () => {
                                 <Box className='flex space-x-3 items-center'>
                                     <Typography variant='h6' color='muted.main'>Qty : </Typography>
                                     <QtyTextField type='number' id="outlined-basic" label="Qty" defaultValue={1} variant="outlined" className='w-24' />
-                                    <MyButton onClick={() => handleAddToCart(selectedProduct._id)}>{!cartLoading ? 'Add to Cart' : <CircularProgress size={20} />}</MyButton>
+                                    <MyButton onClick={() => handleAddToCart(selectedProduct._id)}>{!cartLoading2 ? 'Add to Cart' : <CircularProgress size={20} />}</MyButton>
                                 </Box>
                             </Box>
                         </Grid>

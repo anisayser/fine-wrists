@@ -1,4 +1,4 @@
-import { Backdrop, Box, Fade, Icon, Modal, TableCell, TableRow, Typography } from '@mui/material';
+import { Alert, Backdrop, Box, CircularProgress, Fade, Icon, Modal, Snackbar, TableCell, TableRow, Typography } from '@mui/material';
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../../../../App';
 import useMyCartDelete from '../../../../hooks/useMyCartDelete';
@@ -6,20 +6,10 @@ import { MyButton } from '../../../../Styles/Styles';
 
 const ViewCartDetails = ({ cart, userCart, setUserCart }) => {
 
-    const [deleteModal, setDeleteModal] = useState(false);
-
+    //DELETE CONFIRM MODAL CONTROLLERS**
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-
-    const [handleCartDelete, deleteLoading] = useMyCartDelete();
-    // const [cartValue, setCartValue] = useContext(CartContext);
-
-
-
-
-
-
     const style = {
         position: 'absolute',
         top: '50%',
@@ -32,9 +22,12 @@ const ViewCartDetails = ({ cart, userCart, setUserCart }) => {
         textAlign: 'center',
         p: 4,
     };
+    //DELETE CONFIRM MODAL CONTROLLERS**
 
 
 
+    const [handleCartDelete, deleteLoading] = useMyCartDelete();
+    // const [cartValue, setCartValue] = useContext(CartContext);
 
     /*     const handleCartDelete = id => {
     
@@ -76,6 +69,7 @@ const ViewCartDetails = ({ cart, userCart, setUserCart }) => {
                         <Typography id="transition-modal-title" variant="h6" component="h2">
                             Are you sure you want to delete?
                         </Typography>
+                        {deleteLoading && <CircularProgress sx={{ mt: 3 }} />}
                         <Box sx={{ mt: 5, display: 'flex', justifyContent: 'center' }}>
                             <MyButton onClick={handleClose}>No</MyButton>
                             <MyButton onClick={() => handleCartDelete(cart.productId, userCart, setUserCart)} sx={{ ml: 5 }}>Yes</MyButton>

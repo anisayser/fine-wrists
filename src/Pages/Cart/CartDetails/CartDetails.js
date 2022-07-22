@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import useMyCartDelete from '../../../hooks/useMyCartDelete';
 
 const CartDetails = ({ cart, userCart, setUserCart }) => {
-    const [deleteLoading, setDeleteLoading] = useState(false);
+    // const [deleteLoading, setDeleteLoading] = useState(false);
 
     // userCart.map(uc => )
 
     // console.log('Cart Cart Cart', cart)
 
-    const [handleCartDelete] = useMyCartDelete();
+    const [handleCartDelete, deleteLoading] = useMyCartDelete();
 
 
     // const handleCartDelete = id => {

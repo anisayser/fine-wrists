@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBBgRiUS7cOqqS7_ZY9P-J0OQplBS6YRDU",
-    authDomain: "fine-wrists.firebaseapp.com",
-    projectId: "fine-wrists",
-    storageBucket: "fine-wrists.appspot.com",
-    messagingSenderId: "184005969892",
-    appId: "1:184005969892:web:2edc1c610126fb9874a9f1"
+    apiKey: "AIzaSyD5LoP0tGuOtH1G1ifYSdpsZud1TLkf1IQ",
+    authDomain: "fine-wrists-70ad0.firebaseapp.com",
+    projectId: "fine-wrists-70ad0",
+    storageBucket: "fine-wrists-70ad0.appspot.com",
+    messagingSenderId: "999531243447",
+    appId: "1:999531243447:web:6cbe1b6369bdac8196aa32"
 };
 
 // Initialize Firebase
