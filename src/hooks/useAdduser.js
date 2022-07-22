@@ -3,7 +3,7 @@ import React from 'react';
 const useAdduser = () => {
     const saveUser = (email, password, method) => {
         const user = { email, password };
-        fetch('http://localhost:5000/adduser', {
+        fetch('https://pacific-sea-83230.herokuapp.com/adduser', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -11,7 +11,7 @@ const useAdduser = () => {
             body: JSON.stringify(user)
         })
             .then(res => res.json())
-            .then(data => {})
+            .then(data => { })
             .finally(() => {
 
             })

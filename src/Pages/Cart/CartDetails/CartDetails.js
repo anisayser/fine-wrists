@@ -14,7 +14,7 @@ const CartDetails = ({ cart, userCart, setUserCart }) => {
 
     // const handleCartDelete = id => {
     //     setDeleteLoading(true);
-    //     fetch(`http://localhost:5000/usercart/${id}`, {
+    //     fetch(`https://pacific-sea-83230.herokuapp.com/usercart/${id}`, {
     //         method: 'DELETE',
     //     })
     //         .then(res => res.json())

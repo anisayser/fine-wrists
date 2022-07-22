@@ -117,7 +117,7 @@ const MenuHeader = (props) => {
         e.preventDefault();
         setReviewLoader(true);
         const theReview = { name: user.displayName, photo: user.photoURL, review };
-        fetch('http://localhost:5000/addreview', {
+        fetch('https://pacific-sea-83230.herokuapp.com/addreview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

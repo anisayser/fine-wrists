@@ -30,7 +30,7 @@ const ProductDetails = () => {
 
     const [selectedProduct, setSelectedProduct] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://pacific-sea-83230.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setSelectedProduct(data))
     }, [])
@@ -80,7 +80,7 @@ const ProductDetails = () => {
 
         // const cartProduct = { ...selectedProduct };
         const cartProduct = { productId: randomId.toString(), email: user.email, cartProduct: selectedProduct };
-        fetch('http://localhost:5000/addtocart', {
+        fetch('https://pacific-sea-83230.herokuapp.com/addtocart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -111,7 +111,7 @@ const ProductDetails = () => {
             }
     
             const cartProduct = { email: user.email, cartProduct: selectedProduct };
-            fetch('http://localhost:5000/addtocart', {
+            fetch('https://pacific-sea-83230.herokuapp.com/addtocart', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

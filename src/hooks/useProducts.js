@@ -7,7 +7,7 @@ const useProducts = () => {
     // const [products, setProducts] = useContext(ProductContext);
     useEffect(() => {
         setProductLoading(true)
-        fetch('http://localhost:5000/products')
+        fetch('https://pacific-sea-83230.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
             .finally(() => {

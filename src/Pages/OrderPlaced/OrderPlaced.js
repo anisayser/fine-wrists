@@ -14,7 +14,7 @@ const OrderPlaced = () => {
     const { id } = useParams();
     const [placedOrder, setPlacedOrder] = useState([]);
     useEffect(() => {
-        const uri = `http://localhost:5000/placedorder/${id}`;
+        const uri = `https://pacific-sea-83230.herokuapp.com/placedorder/${id}`;
         fetch(uri)
             .then(res => res.json())
             .then(data => setPlacedOrder(data))

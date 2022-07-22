@@ -25,7 +25,7 @@ const ProductsLooped = ({ product, products, setProducts, setToastOpen }) => {
 
     const handleDeleteProduct = id => {
         setDeleteLoading(true);
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://pacific-sea-83230.herokuapp.com/products/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

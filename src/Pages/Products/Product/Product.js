@@ -57,7 +57,7 @@ const Product = ({ product }) => {
 
         // const cartProduct = { ...product };
         const cartProduct = { productId: randomId.toString(), email: user.email, cartProduct: product };
-        fetch('http://localhost:5000/addtocart', {
+        fetch('https://pacific-sea-83230.herokuapp.com/addtocart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

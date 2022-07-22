@@ -10,7 +10,7 @@ const useCartOfUser = () => {
     // const getCart = useCallback(() => {
     //     setCartLoading(true);
 
-    //     const uri = `http://localhost:5000/usercart/${user?.email}`;
+    //     const uri = `https://pacific-sea-83230.herokuapp.com/usercart/${user?.email}`;
     //     fetch(uri)
     //         .then(res => res.json())
     //         .then(data => setUserCart(data))
@@ -27,7 +27,7 @@ const useCartOfUser = () => {
 
     // useEffect(() => {
     //     setCartLoading(true);
-    //     const uri = `http://localhost:5000/usercart/${user?.email}`;
+    //     const uri = `https://pacific-sea-83230.herokuapp.com/usercart/${user?.email}`;
     //     fetch(uri)
     //         .then(res => res.json())
     //         .then(data => setUserCart(data))
@@ -38,7 +38,7 @@ const useCartOfUser = () => {
 
     useEffect(() => {
         setCartLoading(true);
-        const uri = `http://localhost:5000/usercart/${user?.email}`;
+        const uri = `https://pacific-sea-83230.herokuapp.com/usercart/${user?.email}`;
         fetch(uri)
             .then(res => res.json())
             .then(data => setUserCart(data))

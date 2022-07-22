@@ -15,7 +15,7 @@ const useMyCartDelete = () => {
     const handleCartDelete = (id, userCart, setUserCart) => {
         setDeleteLoading(true);
 
-        fetch(`http://localhost:5000/usercart/${id}`, {
+        fetch(`https://pacific-sea-83230.herokuapp.com/usercart/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

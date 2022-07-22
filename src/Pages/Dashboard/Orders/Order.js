@@ -24,7 +24,7 @@ const Order = ({ order }) => {
         setOrStatus(event.target.value);
 
         const orderStatus = { status: status };
-        fetch(`http://localhost:5000/orderstatus/${order._id}`, {
+        fetch(`https://pacific-sea-83230.herokuapp.com/orderstatus/${order._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

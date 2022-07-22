@@ -43,7 +43,7 @@ const MiddleHeader = () => {
     // useEffect(() => {
     //     console.log('product effect')
     //     // setTimeout(() => {
-    //     fetch('http://localhost:5000/products')
+    //     fetch('https://pacific-sea-83230.herokuapp.com/products')
     //         .then(res => res.json())
     //         .then(data => setProducts(data))
 
@@ -81,7 +81,7 @@ const MiddleHeader = () => {
         useEffect(() => {
             console.log('This is useEffect')
             // setCartLoading(true);
-            const uri = `http://localhost:5000/usercart/${user?.email}`;
+            const uri = `https://pacific-sea-83230.herokuapp.com/usercart/${user?.email}`;
             fetch(uri)
                 .then(res => res.json())
                 .then(data => { setUserCart(data); console.log(data, 'the data') })
@@ -132,7 +132,7 @@ const MiddleHeader = () => {
 
     // const handleCartDelete = id => {
     //     setDeleteLoading(true);
-    //     fetch(`http://localhost:5000/usercart/${id}`, {
+    //     fetch(`https://pacific-sea-83230.herokuapp.com/usercart/${id}`, {
     //         method: 'DELETE',
     //     })
     //         .then(res => res.json())

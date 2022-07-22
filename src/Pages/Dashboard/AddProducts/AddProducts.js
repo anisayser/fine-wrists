@@ -31,7 +31,7 @@ const AddProducts = () => {
         setLoadingAddPost(true);
         const theProduct = { ...products, date: date.toLocaleDateString() };
 
-        fetch('http://localhost:5000/addproduct', {
+        fetch('https://pacific-sea-83230.herokuapp.com/addproduct', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

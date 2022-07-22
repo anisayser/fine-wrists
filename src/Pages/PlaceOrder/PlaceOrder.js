@@ -62,7 +62,7 @@ const PlaceOrder = () => {
         e.preventDefault();
 
         //DELETE THE USER CART
-        fetch(`http://localhost:5000/allusercart/${user.email}`, {
+        fetch(`https://pacific-sea-83230.herokuapp.com/allusercart/${user.email}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
@@ -89,7 +89,7 @@ const PlaceOrder = () => {
 
         // console.log(orderValue)
 
-        fetch('http://localhost:5000/placeorder', {
+        fetch('https://pacific-sea-83230.herokuapp.com/placeorder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

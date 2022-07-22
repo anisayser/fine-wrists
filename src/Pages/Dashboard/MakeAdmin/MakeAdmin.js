@@ -30,7 +30,7 @@ const MakeAdmin = () => {
 
     const makeAdmin = () => {
         const userRole = { role: 'admin' };
-        const uri = `http://localhost:5000/makeadmin/${emailForAdmin}`;
+        const uri = `https://pacific-sea-83230.herokuapp.com/makeadmin/${emailForAdmin}`;
         fetch(uri, {
             method: 'PUT',
             headers: {
