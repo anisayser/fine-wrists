@@ -6,7 +6,7 @@ import Logout from '@mui/icons-material/Logout';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import React, { useContext, useEffect, useState } from 'react';
 import iconPhone from '../../../images/icon_phone.png';
-import logo from '../../../images/logo (1).png';
+import logo from '../../../images/logo.png';
 import cartImg from '../../../images/8-8-450x450.jpg';
 import useCartOfUser from '../../../hooks/useCartOfUser';
 import { MyButton } from '../../../Styles/Styles';
@@ -181,7 +181,7 @@ const MiddleHeader = () => {
                     <Grid item xs={8} sm={4}>
                         {/* SITE LOGO */}
                         <Box>
-                            <img src={logo} className='mx-auto' alt="" />
+                            <img src={logo} className='mx-auto w-28' alt="" />
                         </Box>
                     </Grid>
 

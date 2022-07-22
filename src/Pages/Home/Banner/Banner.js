@@ -61,7 +61,7 @@ const Banner = () => {
 
 
                 <Box className='relative '>
-                    <Box className='absolute text-white w-full text-left' pt={{ md: 2, lg: 5 }}>
+                    <Box className='absolute text-white w-full text-left' pt={{ md: 2, lg: 5, xl: 10 }}>
                         <Container>
                             <Grid container spaceing={2}>
                                 <Grid item xs={12} sm={6}>
@@ -85,7 +85,7 @@ const Banner = () => {
                     </Box>
                 </Box>
                 <Box className='relative '>
-                    <Box className='absolute text-white w-full text-left' pt={{ md: 2, lg: 5 }}>
+                    <Box className='absolute text-white w-full text-left' pt={{ md: 2, lg: 5, xl: 10 }}>
                         <Container>
                             <Grid container spaceing={2}>
                                 <Grid item xs={12} sm={6}>
@@ -109,7 +109,7 @@ const Banner = () => {
                     </Box>
                 </Box>
                 <Box className='relative '>
-                    <Box className='absolute text-white w-full text-left' pt={{ md: 2, lg: 5 }}>
+                    <Box className='absolute text-white w-full text-left' pt={{ md: 2, lg: 5, xl: 10 }}>
                         <Container>
                             <Grid container spaceing={2}>
                                 <Grid item xs={12} sm={6}>
