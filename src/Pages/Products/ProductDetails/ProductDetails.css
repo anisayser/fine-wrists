@@ -1,0 +1,23 @@
+/* .slick-thumb {
+    width: 500px;
+    height: 500px;
+} */
+.slick-thumb li {
+    width: 100px;
+    margin: 0 8px;
+}
+
+.slick-thumb li a img {
+    width: 100%;
+    height: 100px;
+}
+
+.zoom-img {
+    width: 500px;
+    height: 450px;
+}
+
+/* .zoom-img img {
+    width: 100%;
+    height: 100%;
+} */
