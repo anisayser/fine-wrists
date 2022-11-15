@@ -98,7 +98,7 @@ const Footer = () => {
                         <Box className='pb-10'>
                             <Box color='muted.main' className='flex items-center justify-center space-x-3'>
                                 <Icon className="fa-solid fa-copyright"></Icon>
-                                <Typography>All rights reserved | Fine Wrists</Typography>
+                                <Typography>All rights reserved | Fine Wrists || yooooo</Typography>
                             </Box>
                             <img className='mx-auto mt-5' src={payment} alt="" />
                         </Box>
